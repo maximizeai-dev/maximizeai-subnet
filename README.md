@@ -20,3 +20,16 @@ MaximizeAI is a Bittensor subnet dedicated to the 3D Models,Music,Chat Generator
 - **Context-Aware Desicion Making**: Smart switching between models based on input type, complexity, and goal.
 - **Flexible Architecture**: Easily customizable to specific business needs & scale across use cases.
 - **Cross-Model Collaboration**: AI Models work together and share information to improve results.
+
+## MaximizeAI Subnet Setup
+
+This project outlines the steps to research, configure, and deploy a custom Bittensor subnet called **MaximizeAI**. The goal is to understand the Bittensor and Subtensor frameworks and set up a local environment for development, including running a miner and validator.
+
+## Progress Subnet 
+ 
+- [✅] Research **Bittensor** -> May 7th, 2025
+- [✅] Research **Subtensor** -> May 16th, 2025
+- [✅] Create node (Subtensor) in local/staging environment -> May 26th, 2025
+- [✅] Run **miner** on local environment -> May 27th, 2025
+- [✅] Run **validator** on local environment -> May 27th, 2025
+- [ ] Create custom subnet **MaximizeAI** 
