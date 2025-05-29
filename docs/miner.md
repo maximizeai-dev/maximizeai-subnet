@@ -1,6 +1,6 @@
 # Full instructions for setup
 
-Welcome to WOOFAI Mining 🔥
+Welcome to MaximizeAI Mining 🔥
 
 # Overview
 A miner consists of several parts, fitting into two categories:
