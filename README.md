@@ -1,12 +1,12 @@
 <div align="center">
 
-# **MaximizeAI** <!-- omit in toc -->
-
+# **MaximizeAI Subnet** <!-- omit in toc -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## 3D,Music,Chat Generator <!-- omit in toc -->
-
+### 3D Models,Music,Chat Generator <!-- omit in toc -->
 [Website](https://maximizeai.org/) • [App](https://maximizeai.org/playground) • [Telegram](https://t.me/Maximizeai) • [Twitter](https://x.com/Maximize_AI)
+
+![hero](./assets/banner.png)
 </div>
 
 
@@ -27,9 +27,48 @@ This project outlines the steps to research, configure, and deploy a custom Bitt
 
 ## Progress Subnet 
  
-- [✅] Research **Bittensor** -> May 7th, 2025
-- [✅] Research **Subtensor** -> May 16th, 2025
-- [✅] Create node (Subtensor) in local/staging environment -> May 26th, 2025
-- [✅] Run **miner** on local environment -> May 27th, 2025
-- [✅] Run **validator** on local environment -> May 27th, 2025
-- [ ] Create custom subnet **MaximizeAI** 
+- ✅ Research **Bittensor** -> May 7th, 2025
+- ✅ Research **Subtensor** -> May 16th, 2025
+- ✅ Create node (Subtensor) in local/staging environment -> May 26th, 2025
+- ✅ Run **miner** on local environment -> May 27th, 2025
+- ✅ Run **validator** on local environment -> May 27th, 2025
+- ✅ Create custom subnet **MaximizeAI** -> May 28th, 2025
+
+# Miner and Validator Functionality
+
+# Overview
+- ⚖️ [Validator](./docs/validator.md)
+- ⛏️ [Miner](./docs/miner.md)
+
+This tutorial shows how to  run incentives on it using the our testnet.
+**important**.
+- Do not expose your private key.
+- Use only your testnet wallet.
+- Do not reuse your mainnet wallet password.
+- Make sure your incentives are resistant to abuse.
+
+## Preparation
+#### prepare subnet
+```bash
+git clone https://github.com/maximizeai-dev/maximizeai-subnet
+python3 -m venv btcli_venv
+source btcli_venv/bin/activate
+
+# setup bittensor sdk
+pip install bittensor
+pip install -e .
+```
+### start miner
+```bash
+python neurons/miner.py --netuid 367 --subtensor.network test --wallet.name miner --wallet.hotkey miner --logging.debug
+```
+
+### start validator
+```bash
+python neurons/validator.py --netuid 367 --subtensor.network test --wallet.name validator --wallet.hotkey validator --logging.debug 
+```
+### check state
+```bash
+btcli wallet overview --wallet.name miner --netuid 367 --subtensor.network test
+btcli wallet overview --wallet.name validator --netuid 367 --subtensor.network test
+```
