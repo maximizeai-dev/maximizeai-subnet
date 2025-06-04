@@ -19,5 +19,8 @@ May 28th, 2025
 - Create custom subnet **MaximizeAI**
 
 Jun 5th, 2025
-- (./assets/emission-check.png)
-- (./assets/emission-start.png)
+- Cek Emission Start 
+- ![Check Emission Start](./assets/emission-check.png)
+
+- Cek Emission Start 
+- ![ Emission Start](./assets/emission-start.png)
